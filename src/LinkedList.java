@@ -1,3 +1,5 @@
+import java.util.NoSuchElementException;
+
 public class LinkedList {
 
     private class Node {
@@ -14,6 +16,16 @@ public class LinkedList {
 
     private boolean isEmpty(){
         return first == null;
+    }
+
+    private Node getPrevious(Node node)
+    {
+        var current = first;
+        while(current.next != node){
+            current = current.next;
+        }
+
+        return current;
     }
 
 
@@ -42,8 +54,33 @@ public class LinkedList {
 
     }
 
-    // deleteFirst
-    // DeleteLast
+    public void removeFirst()
+    {
+        if(isEmpty()) throw new NoSuchElementException();
+
+        if (first == last) {
+            first = last = null;
+            return;
+        }
+
+        var second = first.next;
+        first.next = null; // so garbage collector will remove it
+        first = second;
+    }
+
+    public void removeLast()
+    {
+        if(isEmpty()) throw new NoSuchElementException();
+
+        if(first == last){
+            first = last = null;
+            return;
+        }
+
+        Node prevNode = getPrevious(last);
+        prevNode.next = null;
+        last = prevNode;
+    }
 
     public boolean contains(int item)
     {
