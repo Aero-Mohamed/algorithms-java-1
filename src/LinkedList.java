@@ -48,6 +48,26 @@ public class LinkedList {
        first = previous;
     }
 
+    public int getKthFromEnd(int k)
+    {
+        if(isEmpty()) throw new IllegalStateException();
+
+        var node1 = first;
+        var node2 = first;
+        for (int i = 0; i < k-1; i++){
+            node2 = node2.next;
+
+            if(node2 == null) throw new IllegalArgumentException();
+        }
+
+        while(node2 != last){
+            node1 = node1.next;
+            node2 = node2.next;
+        }
+
+        return node1.value;
+    }
+
     public int[] toArray()
     {
         var arr = new int[size];
