@@ -13,6 +13,7 @@ public class LinkedList {
 
     private Node first;
     private Node last;
+    private int size;
 
     private boolean isEmpty(){
         return first == null;
@@ -28,6 +29,10 @@ public class LinkedList {
         return current;
     }
 
+    public int size()
+    {
+        return size;
+    }
 
     public void addFirst(int item)
     {
@@ -39,6 +44,8 @@ public class LinkedList {
             node.next = first;
             first = node;
         }
+
+        size++;
     }
 
     public void addLast(int item)
@@ -51,7 +58,7 @@ public class LinkedList {
             last.next = node;
             last = node;
         }
-
+        size++;
     }
 
     public void removeFirst()
@@ -66,6 +73,7 @@ public class LinkedList {
         var second = first.next;
         first.next = null; // so garbage collector will remove it
         first = second;
+        size--;
     }
 
     public void removeLast()
@@ -80,6 +88,7 @@ public class LinkedList {
         Node prevNode = getPrevious(last);
         prevNode.next = null;
         last = prevNode;
+        size--;
     }
 
     public boolean contains(int item)
