@@ -67,12 +67,12 @@ public class LinkedList {
 
         if (first == last) {
             first = last = null;
-            return;
+        }else{
+            var second = first.next;
+            first.next = null; // so garbage collector will remove it
+            first = second;
         }
 
-        var second = first.next;
-        first.next = null; // so garbage collector will remove it
-        first = second;
         size--;
     }
 
@@ -82,12 +82,12 @@ public class LinkedList {
 
         if(first == last){
             first = last = null;
-            return;
+        }else{
+            Node prevNode = getPrevious(last);
+            prevNode.next = null;
+            last = prevNode;
         }
 
-        Node prevNode = getPrevious(last);
-        prevNode.next = null;
-        last = prevNode;
         size--;
     }
 
