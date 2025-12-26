@@ -4,9 +4,26 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        Main.chapterArrays();
+        // Main.chapterArrays();
+        Main.chapterLinkedLists();
     }
 
+    /**
+     * Chapter 2: Linked List
+     */
+    public static void chapterLinkedLists()
+    {
+        var list = new LinkedList();
+        list.addLast(1);
+        list.addLast(2);
+        list.addFirst(0);
+
+
+    }
+
+    /**
+     * Chapter 1: Arrays
+     */
     public static void chapterArrays()
     {
         // Vector: Grow 100% of its size - synchronized
