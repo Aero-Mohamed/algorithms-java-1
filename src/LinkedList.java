@@ -29,6 +29,20 @@ public class LinkedList {
         return current;
     }
 
+    public int[] toArray()
+    {
+        var arr = new int[size];
+        var current = first;
+        var index = 0;
+
+        while(current != null){
+            arr[index++] = current.value;
+            current = current.next;
+        }
+
+        return arr;
+    }
+
     public int size()
     {
         return size;

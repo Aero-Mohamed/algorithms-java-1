@@ -18,6 +18,37 @@ public class Main {
         list.addLast(2);
         list.addFirst(0);
         list.removeLast();
+        System.out.println(
+                Arrays.toString(list.toArray())
+        );
+
+        // Arrays vs. LinkedLists
+        /**
+         *
+         * # Space
+         * Static arrays have fixed size
+         * Dynamic arrays grow by 50-100%
+         * Linked lists don't waste memory
+         * Use arrays if you know the number of items to store
+         * --
+         */
+
+        /**
+         * # Run time complexity ***
+         *    --    | Arrays | Linked Lists
+         * Indexing
+         *  By Index | O(1) | O(n)
+         *  By Value | O(n)
+         *    --
+         * Insert
+         *  Start/End | O(n) | O(1)
+         *     Middle | O(n)
+         *    --
+         * Delete
+         *      Start | O(n) | O(1)
+         *     Middle | O(n)
+         *        End | O(n)
+         */
 
     }
 
