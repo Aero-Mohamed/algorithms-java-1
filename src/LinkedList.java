@@ -44,6 +44,23 @@ public class LinkedList {
 
     // deleteFirst
     // DeleteLast
-    // contains
-    // indexOf
+
+    public boolean contains(int item)
+    {
+        return indexOf(item) != -1;
+    }
+
+    public int indexOf(int item)
+    {
+        int idx = 0;
+        var current = first;
+
+        while(current != null){
+            if(current.value == item) return idx;
+            current = current.next;
+            idx++;
+        }
+
+        return -1;
+    }
 }
