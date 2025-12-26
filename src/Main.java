@@ -15,9 +15,11 @@ public class Main {
     {
         var list = new LinkedList();
         list.addLast(1);
-        list.addLast(2);
-        list.addFirst(0);
-        list.removeLast();
+//        list.addLast(2);
+//        list.addLast(3);
+//        list.addLast(4);
+        list.reverse();
+
         System.out.println(
                 Arrays.toString(list.toArray())
         );
