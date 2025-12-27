@@ -1,3 +1,4 @@
+import Queues.ArrayQueueImplementation;
 import Queues.QueueReverser;
 import Stacks.BalancedString;
 
@@ -20,17 +21,25 @@ public class Main {
      */
     public static void chapterQueues()
     {
-        // Known Implementation of Queue are (ArrayDeque, LinkedList)
-        Queue<Integer> queue = new ArrayDeque<>();
-        queue.add(10);
-        queue.add(20);
-        queue.add(30);
-
-        var reverser = new QueueReverser<Integer>();
-        System.out.println(
-                "Original Queue: " + queue + "\nReversed Queue:" + reverser.reverse(queue)
-        );
-
+        var queue = new ArrayQueueImplementation<Integer>(5);
+        queue.enqueue(10);
+        queue.enqueue(20);
+        queue.enqueue(30);
+        queue.dequeue();
+        queue.dequeue();
+        queue.enqueue(40);
+        queue.enqueue(50);
+        queue.dequeue();
+        queue.enqueue(60);
+        queue.enqueue(70);
+        queue.enqueue(80);
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+        queue.enqueue(10);
+        System.out.println(queue);
     }
 
     /**
