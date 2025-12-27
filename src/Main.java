@@ -1,11 +1,21 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Stack;
+import Stack.StringReverser;
 
 public class Main {
 
     public static void main(String[] args) {
         // Main.chapterArrays();
-        Main.chapterLinkedLists();
+        // Main.chapterLinkedLists();
+        Main.chapterStacks();
+    }
+
+    public static void chapterStacks()
+    {
+        var reverser = new StringReverser();
+        var results = reverser.reverse("Hello World");
+        System.out.println(results);
     }
 
     /**
@@ -28,31 +38,31 @@ public class Main {
         );
 
         // Arrays vs. LinkedLists
-        /**
-         *
-         * # Space
-         * Static arrays have fixed size
-         * Dynamic arrays grow by 50-100%
-         * Linked lists don't waste memory
-         * Use arrays if you know the number of items to store
-         * --
+        /*
+
+          # Space
+          Static arrays have fixed size
+          Dynamic arrays grow by 50-100%
+          Linked lists don't waste memory
+          Use arrays if you know the number of items to store
+          --
          */
 
-        /**
-         * # Run time complexity ***
-         *    --    | Arrays | Linked Lists
-         * Indexing
-         *  By Index | O(1) | O(n)
-         *  By Value | O(n)
-         *    --
-         * Insert
-         *  Start/End | O(n) | O(1)
-         *     Middle | O(n)
-         *    --
-         * Delete
-         *      Start | O(n) | O(1)
-         *     Middle | O(n)
-         *        End | O(n)
+        /*
+          # Run time complexity ***
+             --    | Arrays | Linked Lists
+          Indexing
+           By Index | O(1) | O(n)
+           By Value | O(n)
+             --
+          Insert
+           Start/End | O(n) | O(1)
+              Middle | O(n)
+             --
+          Delete
+               Start | O(n) | O(1)
+              Middle | O(n)
+                 End | O(n)
          */
 
     }
