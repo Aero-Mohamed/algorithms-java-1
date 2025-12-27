@@ -1,14 +1,36 @@
+import Queues.QueueReverser;
 import Stacks.BalancedString;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Queue;
 
 public class Main {
 
     public static void main(String[] args) {
         // Main.chapterArrays();
         // Main.chapterLinkedLists();
-        Main.chapterStacks();
+        // Main.chapterStacks();
+        Main.chapterQueues();
+    }
+
+    /**
+     * Chapter 4: Queues
+     */
+    public static void chapterQueues()
+    {
+        // Known Implementation of Queue are (ArrayDeque, LinkedList)
+        Queue<Integer> queue = new ArrayDeque<>();
+        queue.add(10);
+        queue.add(20);
+        queue.add(30);
+
+        var reverser = new QueueReverser<Integer>();
+        System.out.println(
+                "Original Queue: " + queue + "\nReversed Queue:" + reverser.reverse(queue)
+        );
+
     }
 
     /**
