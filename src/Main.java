@@ -18,7 +18,7 @@ public class Main {
     {
         var expression = new BalancedString();
         System.out.println(
-                expression.validate(") 1 + 2 (")
+                expression.validate("[ 1 + 2 ]{}")
         );
     }
 
