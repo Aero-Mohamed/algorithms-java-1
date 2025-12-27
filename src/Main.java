@@ -1,5 +1,6 @@
 import Queues.ArrayQueueImplementation;
 import Queues.QueueReverser;
+import Queues.StackQueueImplementation;
 import Stacks.BalancedString;
 
 import java.util.ArrayDeque;
@@ -21,24 +22,20 @@ public class Main {
      */
     public static void chapterQueues()
     {
-        var queue = new ArrayQueueImplementation<Integer>(5);
+        var queue = new StackQueueImplementation<>();
         queue.enqueue(10);
         queue.enqueue(20);
         queue.enqueue(30);
-        queue.dequeue();
-        queue.dequeue();
         queue.enqueue(40);
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
         queue.enqueue(50);
-        queue.dequeue();
         queue.enqueue(60);
-        queue.enqueue(70);
-        queue.enqueue(80);
         queue.dequeue();
         queue.dequeue();
         queue.dequeue();
-        queue.dequeue();
-        queue.dequeue();
-        queue.enqueue(10);
+
         System.out.println(queue);
     }
 
