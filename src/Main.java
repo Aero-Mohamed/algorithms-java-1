@@ -1,7 +1,7 @@
+import Stacks.BalancedString;
+
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Stack;
-import Stack.StringReverser;
 
 public class Main {
 
@@ -11,11 +11,15 @@ public class Main {
         Main.chapterStacks();
     }
 
+    /**
+     * Chapter 3: Stacks
+     */
     public static void chapterStacks()
     {
-        var reverser = new StringReverser();
-        var results = reverser.reverse("Hello World");
-        System.out.println(results);
+        var expression = new BalancedString();
+        System.out.println(
+                expression.validate(") 1 + 2 (")
+        );
     }
 
     /**
