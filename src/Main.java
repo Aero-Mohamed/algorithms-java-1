@@ -1,3 +1,4 @@
+import HashTables.HashTable;
 import Queues.ArrayPriorityQueueImplementation;
 import Queues.ArrayQueueImplementation;
 import Queues.QueueReverser;
@@ -12,7 +13,24 @@ public class Main {
         // Main.chapterArrays();
         // Main.chapterLinkedLists();
         // Main.chapterStacks();
-        Main.chapterQueues();
+        // Main.chapterQueues();
+        Main.chapterHashTables();
+    }
+
+    public static void chapterHashTables()
+    {
+        var hashMap = new HashTable(5);
+        hashMap.put(1, "one");
+        hashMap.put(2, "two");
+        hashMap.put(3, "three");
+        hashMap.put(4, "four");
+        hashMap.put(100, "five");
+        hashMap.put(154, "new");
+        hashMap.remove(154);
+
+        System.out.println(hashMap.get(154));
+        System.out.println(hashMap.get(100));
+
     }
 
     /**
